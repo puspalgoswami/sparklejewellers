@@ -380,6 +380,10 @@ ul{ list-style:none; }
    RESPONSIVE
 ========================================================= */
 @media (max-width: 1000px){
+  .site-header{
+    top:72px;
+  }
+
   .main-nav{
     display:none; position:absolute; top:100%; left:0; right:0;
     background:rgba(20,16,12,0.97); backdrop-filter:blur(10px);
@@ -397,10 +401,58 @@ ul{ list-style:none; }
   .footer-top{ grid-template-columns:1fr; text-align:left; }
   .gallery-grid{ columns:2 220px; }
   .visit-grid{ grid-template-columns:1fr; }
-  .rate-items span:not(:first-child):not(.rate-sep){ display:none; }
-  .rate-items .rate-sep{ display:none; }
+    .rate-bar-inner{
+    flex-direction:column;
+    height:auto;
+    padding:8px 4vw;
+    gap:6px;
+  }
+
+  .rate-items{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .rate-contact{
+    justify-content:center;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+
+  .rate-sep{
+    display:none;
+  }
 }
 @media (max-width: 600px){
+  .hero{
+    padding:160px 6vw 40px;
+    min-height:100vh;
+  }
+
+  .header-inner{
+    height:64px;
+  }
+
+  .logo{
+    transform:scale(.82);
+    transform-origin:left center;
+  }
+
+  .hero .eyebrow{
+    max-width:220px;
+    font-size:.78rem;
+    line-height:1.3;
+    margin-bottom:.8rem;
+  }
+
+  .hero-title{
+    font-size:2.2rem;
+    line-height:1.1;
+  }
+
+
   .hero-title{ font-size:2.6rem; }
   .hero-trust{ gap:.6rem; }
   .trust-sep{ display:none; }
