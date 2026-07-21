@@ -143,8 +143,8 @@ revealTargets.forEach((el) => {
 // Fetches data from your Vercel API
 // ==========================================
 
-const GOLD_FACTOR = 1.1753;
-const SILVER_FACTOR = 1.239;
+const GOLD_FACTOR = 1.175;
+const SILVER_FACTOR = 1.23;
 
 async function fetchMetalPrices() {
 
