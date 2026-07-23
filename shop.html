@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shop | Sparkle Jewellers</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Cormorant:wght@400;500;600&family=Jost:wght@300;400;500;600&family=Hind+Siliguri:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="shop.css">
+
+</head>
+
+<body>
+
+  <div class="grain-overlay"></div>
+
+  <!-- ================= RATE BAR ================= -->
+
+  <div class="rate-bar" id="rateBar">
+
+    <div class="rate-bar-inner">
+
+      <div class="rate-items">
+
+        <span>
+
+          <em>22K Gold</em>
+
+          <span id="gold22Price">
+            Loading...
+          </span>
+
+        </span>
+
+        <span class="rate-sep"></span>
+
+        <span>
+
+          <em>24K Gold</em>
+
+          <span id="gold24Price">
+            Loading...
+          </span>
+
+        </span>
+
+        <span class="rate-sep"></span>
+
+        <span>
+
+          <em>Silver</em>
+
+          <span id="silverPrice">
+            Loading...
+          </span>
+
+        </span>
+
+      </div>
+
+      <div class="rate-contact">
+
+        <span id="lastUpdated">
+          Updating...
+        </span>
+
+        <span class="rate-sep"></span>
+
+        <a href="tel:+919674020301">
+
+          096740 20301
+
+        </a>
+
+        <span class="rate-sep"></span>
+
+        <span>
+
+          Bhowanipore, Kolkata
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="site-header" id="siteHeader">
+
+    <div class="header-inner">
+
+      <a class="logo" href="index.html">
+
+        <span class="logo-mark">
+
+          <svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M20 3 L24 17 L37 20 L24 23 L20 37 L16 23 L3 20 L16 17 Z" fill="currentColor">
+
+            </path>
+
+          </svg>
+
+        </span>
+
+        <span class="logo-text">
+
+          <span class="logo-en">
+
+            Sparkle
+
+          </span>
+
+          <span class="logo-bn">
+
+            স্পার্কল জুয়েলার্স
+
+          </span>
+
+        </span>
+
+      </a>
+
+      <nav class="main-nav">
+
+        <a class="active" href="shop.html">
+
+          Shop
+
+        </a>
+
+        <a href="index.html#collections">
+
+          Collections
+
+        </a>
+
+        <a href="index.html#craft">
+
+          Craft
+
+        </a>
+
+        <a href="index.html#gallery">
+
+          Gallery
+
+        </a>
+
+        <a href="index.html#showroom">
+
+          Showroom
+
+        </a>
+
+        <a href="index.html#reviews">
+
+          Reviews
+
+        </a>
+
+      </nav>
+
+      <div style="display:flex;gap:16px;align-items:center;">
+
+        <button class="cart-btn" id="cartBtn">
+
+          <i class="fa-solid fa-bag-shopping"></i>
+
+          <span id="cartCount">
+
+            0
+
+          </span>
+
+        </button>
+
+        <a class="btn btn-ghost header-cta" href="index.html#showroom">
+
+          Visit Us
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- ================= SHOP HERO ================= -->
+
+  <section class="shop-hero">
+
+    <div class="shop-overlay"></div>
+
+    <div class="shop-hero-content">
+
+      <p class="eyebrow">
+        <span class="eyebrow-rule"></span>
+        Premium Jewellery Collection
+      </p>
+
+      <h1>
+        Shop Our Collections
+      </h1>
+
+      <p>
+
+        Browse handcrafted gold, diamond, bridal and silver jewellery,
+        carefully curated for every occasion.
+
+      </p>
+
+      <nav class="breadcrumb">
+
+        <a href="index.html">Home</a>
+
+        <span>/</span>
+
+        <span>Shop</span>
+
+      </nav>
+
+    </div>
+
+  </section>
+
+  <!-- ================= SHOP CONTROLS ================= -->
+
+  <section class="shop-controls">
+
+    <div class="search-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input type="text" id="searchInput" placeholder="Search jewellery...">
+
+    </div>
+
+    <div class="shop-top-row">
+
+      <div class="category-buttons">
+
+        <button class="filter-btn active" data-category="all">
+
+          All
+
+        </button>
+
+        <button class="filter-btn" data-category="gold">
+
+          Gold
+
+        </button>
+
+        <button class="filter-btn" data-category="diamond">
+
+          Diamond
+
+        </button>
+
+        <button class="filter-btn" data-category="bridal">
+
+          Bridal
+
+        </button>
+
+        <button class="filter-btn" data-category="silver">
+
+          Silver
+
+        </button>
+
+        <button class="filter-btn" data-category="rings">
+
+          Rings
+
+        </button>
+
+        <button class="filter-btn" data-category="bracelets">
+
+          Bracelets
+
+        </button>
+
+        <button class="filter-btn" data-category="necklace">
+
+          Necklace
+
+        </button>
+
+      </div>
+
+      <div class="sort-box">
+
+        <select id="sortProducts">
+
+          <option value="featured">
+
+            Featured
+
+          </option>
+
+          <option value="low">
+
+            Price : Low to High
+
+          </option>
+
+          <option value="high">
+
+            Price : High to Low
+
+          </option>
+
+          <option value="new">
+
+            Latest
+
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+    <div class="results-row">
+
+      <h3>
+
+        <span id="productCount">0</span>
+
+        Products Found
+
+      </h3>
+
+    </div>
+
+  </section>
+
+  <!-- ================= PRODUCTS ================= -->
+
+  <section class="shop-section">
+
+    <div class="products-grid" id="productsGrid">
+
+      <!-- Product cards will be injected here by shop.js -->
+
+    </div>
+
+  </section>
+
+  <!-- ================= SHOPPING CART ================= -->
+
+  <aside class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+
+      <h2>Your Cart</h2>
+
+      <button id="closeCart">
+
+        <i class="fa-solid fa-xmark"></i>
+
+      </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems">
+
+      <div class="empty-cart">
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+        <p>Your cart is empty.</p>
+
+      </div>
+
+    </div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+
+        <span>Total</span>
+
+        <strong id="cartTotal">
+
+          ₹0
+
+        </strong>
+
+      </div>
+
+      <button class="checkout-btn" id="checkoutBtn">
+
+        Buy via WhatsApp
+
+      </button>
+
+    </div>
+
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <span class="logo-mark">
+
+          <svg fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M20 3 L24 17 L37 20 L24 23 L20 37 L16 23 L3 20 L16 17 Z" fill="currentColor">
+
+            </path>
+
+          </svg>
+
+        </span>
+
+        <div>
+
+          <p class="footer-en">
+
+            Sparkle Jewellers
+
+          </p>
+
+          <p class="footer-bn">
+
+            স্পার্কল জুয়েলার্স
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <nav class="footer-nav">
+
+        <a href="shop.html">Shop</a>
+
+        <a href="index.html#collections">Collections</a>
+
+        <a href="index.html#craft">Craft</a>
+
+        <a href="index.html#gallery">Gallery</a>
+
+        <a href="index.html#showroom">Showroom</a>
+
+      </nav>
+
+      <div class="footer-contact">
+
+        <p>
+
+          A/B 114 Ashutosh Mukherjee Road<br>
+
+          Bhowanipore, Kolkata 700025
+
+        </p>
+
+        <p>
+
+          09674020301
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      © 2026 Sparkle Jewellers
+
+    </div>
+
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/919674020301" target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+  </a>
+
+  <script src="script.js"></script>
+
+  <script src="shop.js"></script>
+
+</body>
+
+</html>

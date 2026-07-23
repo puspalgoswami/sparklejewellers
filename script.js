@@ -190,6 +190,9 @@ async function fetchMetalPrices() {
 
 function displayPrices(data) {
 
+    // Make today's rate available to shop.js (product pricing) too.
+    window.metalRates = data;
+
     document.getElementById("gold22Price").textContent =
         `₹${data.gold22}/g`;
 
@@ -216,6 +219,12 @@ async function updateMetalPrices() {
         const latest = await fetchMetalPrices();
 
         displayPrices(latest);
+
+        // If we're on the shop page, refresh product prices now that the
+        // live gold rate has arrived (it loads a moment after page render).
+        if (typeof filterProducts === "function") {
+            filterProducts();
+        }
 
     } catch (error) {
 
